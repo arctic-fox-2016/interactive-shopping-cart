@@ -3,9 +3,9 @@
 <head>
 </head>
 <body>
-  EDIT CUSTOMER INFORMATION
+  EDIT ITEM INFORMATION
   <table>
-    <form action="/api/edit/success/<%= customer._id %>" method="POST">
+    <form action="/api/customers/edit/success/<%= customer._id %>" method="POST">
       <tr><td>Member_ID:</td><td><input type="text" value="<%= customer.member_id %>" name="member_id"></td></tr>
       <tr><td>Name:</td><td><input type="text" value="<%= customer.name %>" name="name"></td></tr>
       <tr><td>Address:</td> <td><input type="text" value="<%= customer.address %>" name="address"></td></tr>

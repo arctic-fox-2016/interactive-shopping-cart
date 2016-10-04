@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+  <table>
+  <% for (let i in customers){ %>
+    <tr>
+      <td>Member_ID: <%= customers[i].member_id %></td>
+      <td>Name: <%= customers[i].name %></td>
+      <td>Address: <%= customers[i].address %></td>
+      <td>Zipcode: <%= customers[i].zipcode %></td>
+      <td>Phone: <%= customers[i].phone %></td>
+      <td><form action="api/delete/<%= customers[i]._id %>" method="POST"><input type="submit" value="delete"></form></td>
+      <td><form action="/edit/<%= customers[i]._id %>" method="POST"><input type="submit" value="edit"></form></td>
+    </tr>
+  <% } %>
+  <table>
+</body>
+</html>
+
+<!-- let customersSchema = new Schema({
+  name: String,
+  member_id: String,
+  address: String,
+  zipcode: String,
+  phone: String
+}) -->

@@ -1,0 +1,21 @@
+body {
+  padding: 0px 50px 50px 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+button {
+  margin-top: 30px;
+}
+
+
+.input-group {
+  margin-top: 10px;
+}
+
+.btn {
+  margin-top: 10px;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "shopping-client",
+  "version": "0.1.0",
+  "description": "Shopping Cart Client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Shopping",
+    "Cart",
+    "Client"
+  ],
+  "author": "Septhianto Diga Chandra <imdigachandra@gmail.com>",
+  "license": "MIT"
+}

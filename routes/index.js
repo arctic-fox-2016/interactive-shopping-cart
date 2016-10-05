@@ -8,7 +8,20 @@ router.use(bodyParser())
 
 //client
 router.get('/register', function(req, res, next) {
-  res.render('register.ejs')
+  http.get({
+    host: "localhost",
+    port: "3000",
+    path: "/api/display/customer"
+  }, function(response){
+    let hasil = ""
+    response.on('data', function(d) {
+      hasil += d
+    });
+    response.on('end', function() {
+      let hasilJSONCustomers = JSON.parse(hasil)
+      res.render('register.ejs', {customers: hasilJSONCustomers})
+    })
+  })
 })
 
 //client
@@ -55,6 +68,8 @@ router.get('/display', function(req, res, next) {
   })
 })
 
+//SERVER
+
 router.post('/customers/edit/:id', function(req, res, next) {
   http.get({
     host: "localhost",
@@ -91,6 +106,8 @@ router.post('/items/edit/:id', function(req, res, next) {
 
 //SERVER
 router.post('/api/register/customer', function(req, res, next) {
+  console.log("masuk api")
+  console.log(req.body.member_id)
   let newCustomer = new Models.Customers({ "member_id": req.body.member_id, "name": req.body.name, "address": req.body.address, "zipcode": req.body.zipcode, "phone": req.body.phone }).save(function(err, result) {
     if (err) {
       console.log(err)
@@ -204,6 +221,5 @@ router.post('/api/items/edit/success/:id', function(req, res, next) {
     res.redirect("/display")
   })
 })
-
 
 module.exports = router

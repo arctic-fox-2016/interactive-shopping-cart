@@ -1,0 +1,25 @@
+{
+  "name": "shopping-server",
+  "version": "0.1.0",
+  "description": "Shopping Cart Server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "shopping",
+    "cart",
+    "server"
+  ],
+  "author": "Septhianto Diga Chandra <imdigachandra@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "http": "0.0.0",
+    "mongodb": "^2.2.10",
+    "mongoose": "^4.6.2",
+    "path": "^0.12.7"
+  }
+}

@@ -1,0 +1,103 @@
+  <div class="row">
+        <a href="/library/items/add" class="btn btn-lg btn-success">Add Item</a>
+
+        <a href="/library/customers/add" class="btn btn-lg btn-success">Add Customer</a>
+
+        <a href="/library/cart/add" class="btn btn-lg btn-success">Add Cart</a>
+  </div>
+  
+  <h2>Items</h2>
+
+  <table class="table table-bordered table-hover table-striped" style="margin-top: 20px">
+    <thead>
+      <tr>
+        <th>item_code</th>
+        <th>name</th>
+        <th>description</th>
+        <th>price</th>
+        <th>stock</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% for (var item of items) { %>
+        <tr>
+          <td><%= item.item_code %></td>
+          <td><%= item.name %></td>
+          <td><%= item.description %></td>
+          <td><%= item.price %></td>
+          <td><%= item.stock %></td>
+          <td>
+            <a href="/library/items/<%= item._id %>" class="btn btn-sm btn-primary">View</a> &nbsp;
+            <a href="/library/items/<%= item._id %>/edit" class="btn btn-sm btn-warning">Edit</a> &nbsp;
+            <a href="/library/items/<%= item._id %>/delete" class="btn btn-sm btn-danger">Delete</a>
+          </td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+  
+  <h2>Customers</h2>
+
+  <table class="table table-bordered table-hover table-striped" style="margin-top: 20px">
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>memberid</th>
+        <th>address</th>
+        <th>zipcode</th>
+        <th>phone</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% for (var customer of customers) { %>
+        <tr>
+          <td><%= customer.name %></td>
+          <td><%= customer.memberid %></td>
+          <td><%= customer.address %></td>
+          <td><%= customer.zipcode %></td>
+          <td><%= customer.phone %></td>
+          <td>
+            <a href="/library/customers/<%= customer._id %>" class="btn btn-sm btn-primary">View</a> &nbsp;
+            <a href="/library/customers/<%= customer._id %>/edit" class="btn btn-sm btn-warning">Edit</a> &nbsp;
+            <a href="/library/customers/<%= customer._id %>/delete" class="btn btn-sm btn-danger">Delete</a>
+          </td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+
+<!-- <h2>Carts</h2>
+
+  <table class="table table-bordered table-hover table-striped" style="margin-top: 20px">
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>memberid</th>
+        <th>address</th>
+        <th>zipcode</th>
+        <th>phone</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% for (var cart of carts) { %>
+        <tr>
+          <td><%= cart.name %></td>
+          <td><%= cart.memberid %></td>
+          <td><%= cart.address %></td>
+          <td><%= cart.zipcode %></td>
+          <td><%= cart.phone %></td>
+          <td>
+            <a href="/library/customers/<%= cart._id %>" class="btn btn-sm btn-primary">View</a> &nbsp;
+            <a href="/library/customers/<%= cart._id %>/edit" class="btn btn-sm btn-warning">Edit</a> &nbsp;
+            <a href="/library/customers/<%= cart._id %>/delete" class="btn btn-sm btn-danger">Delete</a>
+          </td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table> -->

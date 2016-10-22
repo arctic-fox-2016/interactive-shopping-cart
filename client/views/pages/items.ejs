@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include ../header.ejs %>
+</head>
+<body>
+  <section class="content">
+    <ul id="item-list"></ul>
+    <form id="form-item">
+            <div class="form-group">
+              <label for="txt-name">Name</label>
+              <input type="text" class="form-control" id="txt-name" placeholder="name">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputFile">File input</label>
+              <input type="file" id="exampleInputFile">
+              <p class="help-block">Example block-level help text here.</p>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+  </section>
+
+
+  <%- include ../nav.ejs %>
+  <%- include ../script.ejs %>
+  <script src="/js/item.js"></script>
+</body>
+</html>

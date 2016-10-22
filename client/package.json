@@ -4,6 +4,8 @@
   "description": "Shopping Cart Client",
   "main": "index.js",
   "scripts": {
+    "start": "node client.js",
+    "dev": "nodemon client.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -12,5 +14,10 @@
     "Client"
   ],
   "author": "Septhianto Diga Chandra <imdigachandra@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "node-sass-middleware": "^0.9.8"
+  }
 }

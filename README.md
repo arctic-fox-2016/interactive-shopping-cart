@@ -1,6 +1,6 @@
 # interactive-shopping-cart
 
-to use this repository please clone ver this repo and then do this step
+to use this repository please clone over this repo, then do this step below
 
 ```
 git clone https://github.com/arctic-fox-2016/interactive-shopping-cart.git

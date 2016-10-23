@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include ../header.ejs %>
+</head>
+
+<body>
+  <%- include ../navigation.ejs %>
+  <section class="content">
+    <div class="container">
+      <hr>
+      <h1>My Cart</h1>
+      <hr>
+      <div class="panel panel-default">
+        <table class="table">
+          <thead>
+            <tr>
+
+              <th>Item Code</th>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Stock</th>
+
+              <th>Action</th>
+
+
+            </tr>
+          </thead>
+          <tbody id="item-list" >
+
+          </tbody>
+        </table>
+      </div>
+      <br>
+      <hr>
+      <h1>Entry Product</h1>
+      <hr>
+      <form id="form-item" action="" method="POST">
+        <div class="form-group">
+          <label for="txt-name">Item Code</label>
+          <input type="text" class="form-control" id="item_code" name="item_code" placeholder="Item Code">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputFile">Name</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputFile">Description</label>
+          <input type="text" class="form-control" id="description" name="description" placeholder="Description">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputFile">Price</label>
+          <input type="text" class="form-control" id="price" name="price" placeholder="Price">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputFile">Stock</label>
+          <input type="text" class="form-control" id="stock" name="stock" placeholder="Stock">
+        </div>
+
+        <button id="btn-hihi" type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+  </section>
+  <%- include ../script.ejs %>
+  <script src="/js/items.js"></script>
+</body>
+
+</html>

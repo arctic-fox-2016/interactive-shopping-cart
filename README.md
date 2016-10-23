@@ -3,7 +3,7 @@
 to use this repository please clone ver this repo and then do this step
 
 ```
-git clone
+git clone https://github.com/arctic-fox-2016/interactive-shopping-cart.git
 ```
 
 ```
